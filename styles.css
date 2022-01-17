@@ -15,7 +15,7 @@ body {
 .profile-img {
     width: 60%;
     border-radius: 20px;
-    border: 10px solid #FABB51;
+    border: 2px solid #FABB51;
 }
 
 .profile-image-wrapper {
@@ -86,8 +86,12 @@ h2 {
     align-items: center;
 }
 
-#myCarousel {
+#carousel-container {
     padding: 30px 50px;
+    background-color: white;
+}
+
+#myCarousel {
     background-color: white;
     align-items: center;
 }
@@ -157,6 +161,10 @@ hr {
     align-items: center;
 }
 
+#details {
+    height: 100%;
+}
+
 .contact-item {
     position: relative;
     background-color: #FAEDC6;
@@ -169,8 +177,7 @@ hr {
 
 .contact-icon {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 12px;
 }
 
 
@@ -184,16 +191,17 @@ hr {
 }
 
 #message {
-    display: flex;
-    align-items: right;
-    padding-top: 40px;
-    padding-bottom: 40px;
     color: black;
-    position: relative;
 }
 
 .message {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    height: 100%;
     background-color: #FAEDC6;
     border-radius: 20px;
 }
@@ -223,26 +231,34 @@ hr {
     text-align: center;
 }
 
-.a-carousel-item {
-    height: 200px;
-    background-color: linear-gradient(to right, #2F3A8F, #FE7E6D)
+.carousel-item {
+    text-align: center;
 }
 
 .carousel-img {
     object-fit: cover;
     width: 100%;
-    height: 600px;
+    height: 800px;
     overflow: hidden;
 }
 
 .sudoku-img {
-    height: 300px;
+    width: 70%;
 }
 
 .eduvate-img {
-    height: 300px;
+    width: 50%;
 }
 
 .notes-img {
-    height: 300px;
+    width: 70%;
+}
+
+@media (max-width: 800px) {
+    .carousel-img {
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
 }
